@@ -77,9 +77,6 @@ func(chanmap ChannelMap) Stop() {
   chanmap.stop <- 0
 }
 
-
-
-
 func (chanmap ChannelMap) Listen() {
   for {
   select {
@@ -101,6 +98,7 @@ func (chanmap ChannelMap) Listen() {
       }
       resp_struct := ReduceResponse{accum_str, accum_int}
       msg_red.resp <- resp_struct
+      
     case <-chanmap.stop:
       return
   }

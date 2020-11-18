@@ -94,6 +94,8 @@ func main() {
 
         go reducer(max_word, emap, "INVALID", 0, reduce_kill)
 
+				reduce_kill1 := make(chan int)
+				go reducer(min_word, emap, "INVALID",1000, reduce_kill1)
 
 	fmt.Println("\nRunning\n")
 	wg.Wait()
