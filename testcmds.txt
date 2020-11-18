@@ -1,0 +1,26 @@
+
+------build-------------
+go build emerging.go cmap.go
+
+-------------1 reader, 1 asker------------------
+./emerging -readers=1 -askers=1 -askdelay=10 -chan -infiles=data/pg1041.txt
+
+
+----------------16 readers, 2 askers------------
+./emerging -readers=16 -askers=2 -askdelay=10 -chan -infiles=data/pg1041.txt,data/pg1103.txt,data/pg1128.txt,data/pg2240.txt,data/pg1129.txt,data/pg1120.txt,data/pg1041.txt,data/pg1107.txt,data/pg1128.txt,data/pg2235.txt,data/pg2242.txt,data/pg1514.txt,data/pg2235.txt, data/pg1524.txt,data/pg1129.txt,data/pg1128.txt
+------------------------------------------------
+
+----------------4 readers, 8 askers-------------
+./emerging -readers=4 -askers=8 -askdelay=10 -chan -infiles=data/pg1041.txt,data/pg1103.txt,data/pg1107.txt,data/pg1112.txt
+
+---------------16 readers, 32 askers------------
+./emerging -readers=16 -askers=32 -askdelay=10 -chan -infiles=data/pg1041.txt,data/pg1103.txt,data/pg1128.txt,data/pg2240.txt,data/pg1129.txt,data/pg1120.txt,data/pg1041.txt,data/pg1107.txt,data/pg1128.txt,data/pg2235.txt,data/pg2242.txt,data/pg1514.txt,data/pg2235.txt, data/pg1524.txt,data/pg1129.txt,data/pg1128.txt
+---------------64 readers, 64 askers------------
+
+./emerging -chan -readers=64 -askers=64 -askdelay=10 -infiles=data/pg1041.txt,data/pg1041.txt,data/pg1041.txt,data/pg1041.txt,data/pg1103.txt,data/pg1103.txt,data/pg1103.txt,data/pg1103.txt,data/pg1107.txt,data/pg1107.txt,data/pg1107.txt,data/pg1107.txt,data/pg1112.txt,data/pg1112.txt,data/pg1112.txt,data/pg1112.txt,data/pg1120.txt,data/pg1120.txt,data/pg1120.txt,data/pg1120.txt,data/pg1128.txt,data/pg1128.txt,data/pg1128.txt,data/pg1128.txt,data/pg1129.txt,data/pg1129.txt,data/pg1129.txt,data/pg1129.txt,data/pg1514.txt,data/pg1514.txt,data/pg1514.txt,data/pg1514.txt,data/pg1524.txt,data/pg1524.txt,data/pg1524.txt,data/pg1524.txt,data/pg2235.txt,data/pg2235.txt,data/pg2235.txt,data/pg2235.txt,data/pg2240.txt,data/pg2240.txt,data/pg2240.txt,data/pg2240.txt,data/pg2242.txt,data/pg2242.txt,data/pg2242.txt,data/pg2242.txt,data/pg2243.txt,data/pg2243.txt,data/pg2243.txt,data/pg2243.txt,data/pg2264.txt,data/pg2264.txt,data/pg2264.txt,data/pg2264.txt,data/pg2265.txt,data/pg2265.txt,data/pg2265.txt,data/pg2265.txt,data/pg2267.txt,data/pg2267.txt,data/pg2267.txt,data/pg2267.txt
+
+
+------------------optional----------------------
+2 readers, 2 askers
+./emerging -readers=2 -askers=2 -askdelay=10 -chan -infiles=data/pg1041.txt,data/pg1103.txt
+------------------------------------------------
